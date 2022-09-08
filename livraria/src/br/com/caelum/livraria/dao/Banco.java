@@ -3,6 +3,24 @@ package br.com.caelum.livraria.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @Singleton
+ * 
+ * Garantia de haver somente uma instância do Session Bean em uso
+ * 
+ * 
+ * @Startup
+ * 
+ * podemos definir que queremos usar o Singleton Bean desde o início da aplicação. 
+ * Inicialização com @Startup também é chamada eager initialization
+ * 
+ * 
+ * @PostConstruct
+ * 
+ * Assim que o EJB Container cria e inicializa o Session Bean, 
+ * o método anotado com @PostConstruct é executado
+ */
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -25,9 +43,9 @@ public class Banco {
 		inicializaBanco();
 	}
 	
-	@PostConstruct
+	@PostConstruct 
     void aposCriacao() {
-        System.out.println("[INFO] O Banco acabou de ser criado.");
+        System.out.println("[INFO] .");
     }
 	
 	public void save(Livro livro) {
