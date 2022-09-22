@@ -7,7 +7,6 @@ import br.com.caelum.livraria.modelo.Usuario;
 
 @Stateless
 public class UsuarioDao {
-	
 	@Inject
 	private Banco banco;
 

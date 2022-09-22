@@ -9,7 +9,6 @@ import br.com.caelum.livraria.modelo.Livro;
 
 @Stateless
 public class LivroDao {
-	
 	@Inject
 	private Banco banco;
 	
